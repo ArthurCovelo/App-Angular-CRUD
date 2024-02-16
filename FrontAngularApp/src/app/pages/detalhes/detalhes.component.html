@@ -1,0 +1,64 @@
+<mat-card class="responsive-card">
+<div>
+    <h1 class="text-light">Detalhes Funcionário</h1>
+</div>
+
+<div *ngIf="funcionario">
+
+<form>
+<div class="input-box">
+<mat-form-field class="responsive-field">
+  <mat-label>Nome:</mat-label>
+ <input matInput type="text" value="{{funcionario.nome}}" disabled>
+  </mat-form-field>
+</div>
+
+<div  class="input-box">
+<mat-form-field class="responsive-field">
+  <mat-label>Sobrenome:</mat-label>
+  <input matInput type="text" value="{{funcionario.sobrenome}}" disabled>
+  </mat-form-field>
+</div>
+
+<div  class="input-box">
+<mat-form-field class="responsive-field">
+  <mat-label>Departamento:</mat-label>
+  <input matInput type="text" value="{{funcionario.departamento}}" disabled>
+  </mat-form-field>
+</div>
+
+<div  class="input-box">
+<mat-form-field class="responsive-field"> 
+  <mat-label>Turno:</mat-label>
+  <input matInput type="text" value="{{funcionario.turno}}" disabled>
+  </mat-form-field>
+</div>
+
+<div  class="input-box">
+<mat-form-field class="responsive-field">
+  <mat-label>Situação:</mat-label>
+  <input matInput type="text" value="{{funcionario.ativo == true ? 'Ativo' : 'Inativo'}}" disabled>
+  </mat-form-field>
+</div>
+
+
+<div  class="input-box">
+<mat-form-field class="responsive-field">
+  <mat-label>Data de Criação:</mat-label>
+  <input matInput type="text" value="{{funcionario.dataDeCriacao}}" disabled>
+  </mat-form-field>
+</div>
+
+<div class="input-box">
+<mat-form-field class="responsive-field"> 
+  <mat-label>Data de Alteração:</mat-label>
+  <input matInput type="text" value="{{funcionario.dataDeAlteracao}}" disabled>
+  </mat-form-field>
+</div>
+<div class="button-container">
+  <button class="action-buttons" (click)="InativaFuncionario()" mat-raised-button color="warn">Inativar</button>
+  <button class="action-buttons" mat-stroked-button color="basic" routerLink="/funcionarios">Cancelar</button>
+</div>
+</form>
+</div>
+</mat-card>

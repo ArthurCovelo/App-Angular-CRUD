@@ -1,0 +1,42 @@
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 350px;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: auto;
+    overflow: hidden;
+  }
+  .dialog-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    .dialog-container {
+      height: 350px;
+      width: 350px;
+      font-size: 14px;
+      display: block;
+      overflow: hidden;
+    }
+  
+    .mat-dialog-title {
+      font-size: 16px;
+      display: block;
+      overflow: hidden;
+    }
+  
+    .mat-dialog {
+      font-size: 14px;
+      display: block;
+      overflow: hidden;
+    }
+  .dialog-btn button {
+    padding: 5px 10px;
+    font-size: 12px;
+    display: block;
+  }
+  }

@@ -1,0 +1,82 @@
+
+<mat-card class="responsive-card">
+  <mat-card-title> - {{btnTitulo}}</mat-card-title>
+  <mat-card-subtitle>É rápido e fácil.</mat-card-subtitle>
+    <form [formGroup]="funcionarioForm" (ngSubmit)="submit()" #formDit="ngForm">
+<input type="hidden" formControlName="id">
+
+    <div>
+        <mat-form-field class="responsive-field">
+          <mat-label>Nome:</mat-label>
+          <input matInput id="nome" type="text" class="form-control text-dark" formControlName="nome" placeholder="Insira o Nome!"  required>
+        </mat-form-field>
+      </div>
+
+         <div>
+        <mat-form-field class="responsive-field">
+          <mat-label>Sobrenome:</mat-label>
+          <input matInput id="sobrenome" type="text" class="form-control text-dark" formControlName="sobrenome" placeholder="Insira o Sobrenome!" required>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="responsive-field">
+          <mat-label>Email:</mat-label>
+          <input matInput id="email" type="text" class="form-control text-dark" formControlName="email" placeholder="Ex. fulano@example.com" required>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="responsive-field">
+          <mat-label>Idade:</mat-label>
+          <input matInput id="idade" type="number" class="form-control text-dark" formControlName="idade" placeholder="XX" required>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="responsive-field">
+          <mat-label>Telefone:</mat-label>
+          <input matInput id="telefone" type="text" class="form-control text-dark" formControlName="telefone" placeholder="21 9XXXX-XXXX" required>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="responsive-field">
+          <mat-label>Departamento:</mat-label>
+          <mat-select id="departamento" class="form-select "  formControlName="departamento" required>
+            <mat-option value="RecursosHumanos">Recursos Humanos</mat-option>
+            <mat-option value="Financas">Finanças</mat-option>
+            <mat-option value="TI">TI</mat-option>
+            <mat-option value="Vendas">Vendas</mat-option>
+            <mat-option value="Marketing">Marketing</mat-option>
+            <mat-option value="Producao">Produção</mat-option>
+            <mat-option value="Logistica">Logistica</mat-option>
+            <mat-option value="Juridico">Juridico</mat-option>
+            <mat-option value="RH">RH</mat-option>
+            <mat-option value="Compras">Compras</mat-option>
+            <mat-option value="Qualidade">Qualidade</mat-option>
+            <mat-option value="Operacoes">Operacoes</mat-option>
+            <mat-option value="Desenvolvimento">Desenvolvimento</mat-option>
+            <mat-option value="PesquisaDesenvolvimento">Pesquisa Desenvolvimento</mat-option>
+            <mat-option value="AtendimentoCliente">Atendimento Cliente</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        </div>
+
+        <mat-form-field class="responsive-field">
+            <mat-label>Turno</mat-label>
+            <mat-select id="turno" class="form-select" formControlName="turno" required>
+              <mat-option value="Manha">Manha</mat-option>
+              <mat-option value="Tarde">Tarde</mat-option>
+              <mat-option value="Noite">Noite</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div class="button-container">
+            <button type="submit" class="btn btn-success" mat-raised-button color="warn" [disabled]="!funcionarioForm.valid">{{btnAcao}}</button>
+            <button class="btn btn-primary" mat-raised-button color="basic" routerLink="/funcionarios">Cancelar</button>
+          </div>
+
+</form>
+
+</mat-card>

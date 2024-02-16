@@ -1,0 +1,12 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mat-toolbar span {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 15px; /* Defina o tamanho da fonte desejado */
+  }
+  

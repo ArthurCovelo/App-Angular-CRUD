@@ -1,0 +1,81 @@
+<div class="btn_menu">
+  <button mat-icon-button mat-list-item routerLink="/cadastro"  matTooltip="Adicionar Funcionário">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+<mat-card class="responsive-card">
+<div class="input-box" fxLayout="row">
+  <mat-form-field>
+    <input matInput (input)="search($event)" placeholder="Buscar">
+  </mat-form-field>
+</div>
+<div class="example-container mat-elevation-z8 responsive-table">
+  <mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="Situacao">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let funcionario" data-label="status">
+        <div>
+        <img [src]="funcionario.ativo ? 'assets/img/on.png' : 'assets/img/off.png'"
+        alt="Status"
+        class="status-icon"
+        [matTooltip]="funcionario.ativo ? 'Ativo' : 'Inativo'"
+        matTooltipClass="example-tooltip-uppercase"
+        aria-label="Status do funcionário">
+      </div>
+     </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Nome">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Nome </mat-header-cell>
+      <mat-cell *matCellDef="let funcionario" data-label="nome"> {{funcionario.nome}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Sobrenome">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Sobrenome </mat-header-cell>
+      <mat-cell *matCellDef="let funcionario" data-label="sobrenome"> {{funcionario.sobrenome }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Email">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+      <mat-cell *matCellDef="let funcionario" data-label="email"> {{funcionario.email}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Idade">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Idade </mat-header-cell>
+      <mat-cell *matCellDef="let funcionario" data-label="idade"> {{funcionario.idade}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Telefone">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Telefone </mat-header-cell>
+      <mat-cell *matCellDef="let funcionario" data-label="telefone"> {{funcionario.telefone}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Departamento">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Departamento </mat-header-cell>
+      <mat-cell *matCellDef="let funcionario" data-label="departamento"> {{funcionario.departamento}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Ações">
+      <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
+      <mat-cell *matCellDef="let funcionario">
+        <button  class="action-buttons" mat-fab color="basic" routerLink="/editar/{{funcionario.id}}" matTooltip="Editar">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button class="action-buttons"  mat-fab color="warn" routerLink="/detalhes/{{funcionario.id}}" matTooltip="Detalhes">
+          <mat-icon>info</mat-icon>
+        </button>
+        <button class="action-buttons" mat-fab color="primary" matTooltip="Delete" (click)="OpenDialog(funcionario.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+
+  <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+  <mat-row class="mat-row" *matRowDef="let funcionario; columns: columnsToDisplay"></mat-row>
+
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</div>
+</mat-card>

@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.mat-drawer {
+  width: 14%;
+  min-width: 60px;
+}
+
+
+.center-content {
+  flex: 1;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+}
+.btn_menu {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .mat-drawer {
+    width: 80%;
+    min-width: 0;
+  }
+
+  .mat-nav-list {
+    width: 100%;
+  }
+}

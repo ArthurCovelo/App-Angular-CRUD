@@ -1,0 +1,14 @@
+.custom-footer {
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+.mat-toolbar {
+  height: 60px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

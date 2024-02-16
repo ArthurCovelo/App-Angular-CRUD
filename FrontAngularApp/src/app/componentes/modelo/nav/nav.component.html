@@ -1,0 +1,23 @@
+<mat-drawer-container>
+<mat-drawer mode="side" [opened]="drawerOpened" (openedChange)="drawerOpened = $event">
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/" (click)="toggleDrawer()">
+        <i><mat-icon>home</mat-icon></i>
+        Inicio
+      </a>
+      <a mat-list-item routerLink="/funcionarios" (click)="toggleDrawer()">
+        <i><mat-icon>assignment_ind</mat-icon></i>
+        Funcionários
+      </a>
+
+    </mat-nav-list>
+  </mat-drawer>
+  <div class="center-content">
+    <div class="btn_menu">
+      <button  mat-icon-button matTooltip="Warn" color="warn" (click)="toggleDrawer()" >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
