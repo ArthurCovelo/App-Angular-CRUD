@@ -24,13 +24,13 @@ O **AngularCRUD** é uma aplicação que demonstra as operações de CRUD, permi
 ### 📧 Contato
 
 <div align=center>
-  <a href="mailto:seuemail@gmail.com" >
+  <a href="mailto:ArthurCovelo@gmail.com" >
     <img src="https://img.shields.io/badge/seuemail@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="gmail">
   </a>
 
   <br>
   
-   <a href="https://www.linkedin.com/in/seulinkedin/">
+   <a href="https://www.linkedin.com/in/arthurcovelo/">
     <img src="https://img.shields.io/badge/linkedin.com/in/seulinkedin/-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin">
   </a>    
 </div>
