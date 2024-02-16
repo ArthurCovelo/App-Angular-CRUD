@@ -2,8 +2,6 @@
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) na versão 17.1.1.
 
-![Página em execução](./src/assets/.png)
-
 ## 🚀 Sobre o Projeto "AngularCRUD"
 
 Este é um exemplo completo de CRUD (Create, Read, Update, Delete) desenvolvido em Angular 17, utilizando tecnologias como HTML, CSS, TypeScript, .NET e SQL Server. Foi criado como parte do Curso de Formação Angular e Formação .Net na Digital Innovation One (DIO), com o objetivo de aplicar os conhecimentos adquiridos no framework Angular e .Net.
