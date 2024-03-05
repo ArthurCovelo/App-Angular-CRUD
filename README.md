@@ -2,7 +2,7 @@
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) na versão 17.1.1.
 
-![preview](./.FrontAngularApp/src/assets/Exemplos_Angular.gif)
+![preview](./.github/Exemplos_Angular.gif)
 
 ## 🚀 Sobre o Projeto "AngularCRUD"
 
